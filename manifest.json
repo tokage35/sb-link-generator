@@ -1,0 +1,28 @@
+{
+    "manifest_version": 2,
+    "name": "sb-link-generator",
+    "description": "generate link with title for scrapbox",
+    "version": "1.0",
+
+    "background" : {
+     "scripts" : ["background.js"]
+   },
+
+    "permissions" : [
+      "tabs",
+      "clipboardWrite"
+    ],
+
+    "icons" : {
+      "48" : "icons/icon_48.png"
+    },
+
+    "commands":{
+      "save_to_clipboard": {
+            "suggested_key": {
+                "default": "Ctrl+Shift+S"
+            },
+            "description": "Save to clipboard"
+        }
+    }
+}
