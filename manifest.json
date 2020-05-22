@@ -1,8 +1,8 @@
 {
     "manifest_version": 2,
     "name": "sb-link-generator",
-    "description": "generate link with title for scrapbox",
-    "version": "1.0",
+    "description": "copy a link with title for scrapbox notion",
+    "version": "1.1",
 
     "background" : {
      "scripts" : ["background.js"]
@@ -20,7 +20,8 @@
     "commands":{
       "save_to_clipboard": {
             "suggested_key": {
-                "default": "Ctrl+Shift+S"
+                "mac": "Ctrl+Shift+S",
+                "windows": "Ctrl+Shift+S"
             },
             "description": "Save to clipboard"
         }
