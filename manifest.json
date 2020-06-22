@@ -21,7 +21,7 @@
       "save_to_clipboard": {
             "suggested_key": {
                 "mac": "Ctrl+Shift+S",
-                "windows": "Ctrl+Shift+S"
+                "windows": "Ctrl+Shift+Q"
             },
             "description": "Save to clipboard"
         }
