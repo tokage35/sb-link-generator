@@ -19,7 +19,7 @@
     "commands": {
       "copy_url": {
         "suggested_key": {
-          "default": "Ctrl+Shift+S",
+          "default": "Ctrl+Shift+X",
           "mac": "Command+Shift+S"
         },
         "description": "Copy URL in Scrapbox notation"
