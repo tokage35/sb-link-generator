@@ -15,20 +15,18 @@ chrome.commands.onCommand.addListener((command) => {
       console.log('Scrapbox notation:', scrapboxNotation);
 
       // Inject script into the tab to access clipboard API
+      let code = `
+        navigator.clipboard.writeText('${scrapboxNotation}').then(() => {
+          console.log('Copying to clipboard was successful!');
+        }, (err) => {
+          console.error('Could not copy text: ', err);
+        });
+      `;
+
       chrome.scripting.executeScript({
         target: { tabId: tab.id },
-        function: copyToClipboard,
-        args: [scrapboxNotation]
+        function: new Function(code)
       });
     });
   }
 });
-
-// Function to be injected into the tab
-function copyToClipboard(text) {
-  navigator.clipboard.writeText(text).then(() => {
-    console.log('Copying to clipboard was successful!');
-  }, (err) => {
-    console.error('Could not copy text: ', err);
-  });
-}
