@@ -4,4 +4,4 @@
 
 # ショートカットキー  
 mac: command+shift+S  
-win: ctrl+shift+Q (Sだと何かと衝突したので)
+win: ctrl+shift+X
