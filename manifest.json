@@ -1,29 +1,28 @@
 {
-    "manifest_version": 2,
+    "manifest_version": 3,
     "name": "sb-link-generator",
     "description": "copy a link with title for scrapbox notion",
-    "version": "1.1",
-
-    "background" : {
-     "scripts" : ["background.js"]
-   },
-
-    "permissions" : [
-      "tabs",
-      "clipboardWrite"
-    ],
-
-    "icons" : {
-      "48" : "icons/icon_48.png"
+    "version": "2.0",
+    "background": {
+      "service_worker": "background.js"
     },
-
-    "commands":{
-      "save_to_clipboard": {
-            "suggested_key": {
-                "mac": "Ctrl+Shift+S",
-                "windows": "Ctrl+Shift+Q"
-            },
-            "description": "Save to clipboard"
-        }
+    "permissions": ["tabs", "scripting"],
+    "host_permissions": [
+      "<all_urls>"
+    ],
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "48": "icons/icon_48.png"
+      }
+    },
+    "commands": {
+      "copy_url": {
+        "suggested_key": {
+          "default": "Ctrl+Shift+S",
+          "mac": "Command+Shift+S"
+        },
+        "description": "Copy URL in Scrapbox notation"
+      }
     }
 }
